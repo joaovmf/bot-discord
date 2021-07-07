@@ -1,3 +1,4 @@
+  
 const movies = []
 
 addMovie = (name,synopsis,image, type, id) => movies.push({name,synopsis,image, type, id})
