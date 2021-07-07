@@ -1,6 +1,14 @@
   
 const movies = []
 
+/**
+   * Função que adiciona os filmes no array vazio.
+   * @param {string} name - Nome do filme.
+   * @param {string} synopsis - Sinopse do filme.
+   * @param {string} image - Imagem do filme.
+   * @param {string} type - Tipo/categoria do filme.
+   * @param {number} id- Identificação do filme no array.
+   */
 addMovie = (name,synopsis,image, type, id) => movies.push({name,synopsis,image, type, id})
 
 addMovie("Episódio 4 - Uma nova esperança","O jovem Luke Skywalker sonha ir para a Academia como seus amigos, mas se vê envolvido em uma guerra intergalática. quando seu tio compra dois robôs e com eles encontra uma mensagem da princesa Leia Organa para o Jedi Obi-Wan Kenobi sobre os planos da construção da Estrela da Morte. (1977)", "https://play-lh.googleusercontent.com/urFmNCsqsU93qEKDmhrs60zl2rDki-XzdQpms01-P64kMX3VkGO0c7Sf2ira2mzbgwmM","classic", 1)
