@@ -7,7 +7,6 @@ const msg = new Discord.MessageEmbed();
  * Função principal que recebe a mensagem do usuário.
  */
 receiveMessage = (message) => {
-  const authorMsg = message.author.username;
   /**
    * Função que faz o bot mostrar todos os filmes do array.
    */
@@ -54,6 +53,7 @@ receiveMessage = (message) => {
       });
   };
   if (message.author.bot == false) {
+    const authorMsg = message.author.username;
     if (message.content == "!iniciar") {
       message.channel.send(`Olá! Seja muito bem vindo, ${authorMsg}. Eu sou o bot do João. Abaixo você verá a minha lista completa de comandos:`);
       msg.setTitle("LISTA DE COMANDOS");
@@ -109,7 +109,7 @@ receiveMessage = (message) => {
       message.channel.send("Esta é a trilogia dos filmes Spin-Off.");
       filterByType("spin");
     } else {
-      message.channel.send(`Este comando não é válido, ${authorMsg}. Por favor digite "!iniciar" para ver minha lista completa de comandos.`);
+      message.channel.send(`Este comando não é válido, ${authorMsg}. Por favor digite "!iniciar" para ver minha lista completa de comandos. Que a força esteja com você!`);
     }
   }
 };
