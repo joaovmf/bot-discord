@@ -3,7 +3,14 @@ const movies = require("./movies.js");
 const commands = require("./commands.js");
 const msg = new Discord.MessageEmbed();
 
+/**
+ * Função principal que recebe a mensagem do usuário.
+ */
 receiveMessage = (message) => {
+  const authorMsg = message.author.username;
+  /**
+   * Função que faz o bot mostrar todos os filmes do array.
+   */
   showAll = () => {
     movies.map((movie) => {
       msg.setTitle(movie.name);
@@ -14,6 +21,10 @@ receiveMessage = (message) => {
       message.channel.send(msg);
     });
   };
+  /**
+   * Função que filtra os filmes por ID e faz o bot mostrar apenas um.
+   * @param {number} param - ID do filme.
+   */
   filterById = (param) => {
     movies
       .filter((movie) => movie.id == param)
@@ -26,6 +37,10 @@ receiveMessage = (message) => {
         message.channel.send(msg);
       });
   };
+  /**
+   * Função que filtra os filmes por tipo e faz o bot mostrar apenas os que são do mesmo tipo.
+   * @param {string} param - Tipo do filme.
+   */
   filterByType = (param) => {
     movies
       .filter((movie) => movie.type == param)
@@ -38,7 +53,6 @@ receiveMessage = (message) => {
         message.channel.send(msg);
       });
   };
-  const authorMsg = message.author.username;
   if (message.author.bot == false) {
     if (message.content == "!iniciar") {
       message.channel.send(
