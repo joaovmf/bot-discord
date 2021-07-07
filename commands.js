@@ -1,4 +1,12 @@
-const commands = [`!starwars = mostra todos os filmes.
+const commands = [`!starwars = mostra todos os filmes por ordem de lançamento.
+
+!classicos = mostra a trilogia clássica. 
+
+!prequel = mostra a trilogia prequel. 
+
+!novos = mostra a trilogia mais recente. 
+
+!spin = mostra os filmes Spin-off.
 
 !starwars1 = mostra o primeiro filme da primeira trilogia.
 
