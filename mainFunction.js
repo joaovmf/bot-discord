@@ -1,11 +1,10 @@
 const Discord = require("discord.js");
-const bot = new Discord.Client();
 const movies = require("./movies.js");
 const commands = require("./commands.js");
+const msg = new Discord.MessageEmbed();
 
 receiveMessage = (message) => {
   const authorMsg = message.author.username;
-  const msg = new Discord.MessageEmbed();
   if (message.author.bot == false) {
     if (message.content == "!iniciar") {
       message.channel.send(
