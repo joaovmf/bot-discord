@@ -17,6 +17,7 @@ receiveMessage = (message) => {
       msg.setColor("#00de3f");
       msg.setThumbnail(movie.image);
       msg.setImage(movie.image);
+      msg.setFooter('Desenvolvido por João Victor de Medeiros.');
       message.channel.send(msg);
     });
   };
@@ -33,6 +34,7 @@ receiveMessage = (message) => {
         msg.setColor("#2127d9");
         msg.setThumbnail(movie.image);
         msg.setImage(movie.image);
+        msg.setFooter('Desenvolvido por João Victor de Medeiros.');
         message.channel.send(msg);
       });
   };
@@ -49,6 +51,7 @@ receiveMessage = (message) => {
         msg.setColor("#2127d9");
         msg.setThumbnail(movie.image);
         msg.setImage(movie.image);
+        msg.setFooter('Desenvolvido por João Victor de Medeiros.')
         message.channel.send(msg);
       });
   };
