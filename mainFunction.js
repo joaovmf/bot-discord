@@ -14,9 +14,17 @@ receiveMessage = (message) => {
     movies.map((movie) => {
       msg.setTitle(movie.name);
       msg.setDescription(movie.synopsis);
-      msg.setColor("#00de3f");
-      msg.setThumbnail(movie.image);
+      if (movie.type == 'classic') {
+        msg.setColor("#00de3f");
+      } else if (movie.type == 'prequel') {
+        msg.setColor("#021ef2");
+      } else if (movie.type == 'new') {
+        msg.setColor("#9e005c");
+      }  else if (movie.type == 'spin') {
+        msg.setColor("#d7eb00");
+      }
       msg.setImage(movie.image);
+      msg.setThumbnail(movie.image2);
       msg.setFooter('Desenvolvido por João Victor de Medeiros.');
       message.channel.send(msg);
     });
@@ -31,9 +39,17 @@ receiveMessage = (message) => {
       .map((movie) => {
         msg.setTitle(movie.name);
         msg.setDescription(movie.synopsis);
-        msg.setColor("#2127d9");
-        msg.setThumbnail(movie.image);
+        if (movie.type == 'classic') {
+          msg.setColor("#00de3f");
+        } else if (movie.type == 'prequel') {
+          msg.setColor("#021ef2");
+        } else if (movie.type == 'new') {
+          msg.setColor("#9e005c");
+        }  else if (movie.type == 'spin') {
+          msg.setColor("#d7eb00");
+        }
         msg.setImage(movie.image);
+        msg.setThumbnail(movie.image2);
         msg.setFooter('Desenvolvido por João Victor de Medeiros.');
         message.channel.send(msg);
       });
@@ -48,8 +64,15 @@ receiveMessage = (message) => {
       .map((movie) => {
         msg.setTitle(movie.name);
         msg.setDescription(movie.synopsis);
-        msg.setColor("#2127d9");
-        msg.setThumbnail(movie.image);
+        if (movie.type == 'classic') {
+          msg.setColor("#00de3f");
+        } else if (movie.type == 'prequel') {
+          msg.setColor("#021ef2");
+        } else if (movie.type == 'new') {
+          msg.setColor("#9e005c");
+        }  else if (movie.type == 'spin') {
+          msg.setColor("#d7eb00");
+        }
         msg.setImage(movie.image);
         msg.setFooter('Desenvolvido por João Victor de Medeiros.')
         message.channel.send(msg);
