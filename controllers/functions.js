@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const movies = require("../resources/movies.json");
+
 const textFooter = "Desenvolvido por João Victor de Medeiros.";
 
 /**
@@ -18,7 +19,7 @@ const textFooter = "Desenvolvido por João Victor de Medeiros.";
   };
 
 /**
- * Função que faz o bot mostrar todos os filmes do array.
+ * Função que faz o bot mostrar todos os filmes do arquivo JSON. 
  * @param {string} channel - Canal da mensagem.
  */
  const showAll = (channel) => {
@@ -48,10 +49,5 @@ const textFooter = "Desenvolvido por João Victor de Medeiros.";
         channel.send(msgMovie(movie));
       });
   };
-  
-  /**
-   * Função principal que recebe a mensagem do usuário.
-   * @param {Discord.Message} message - Objeto mensagem recebido pelo BOT
-   */
 
   module.exports = {msgMovie, filterByType, filterById, showAll}

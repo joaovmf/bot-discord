@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const mainFunction = require("./switchMainFunction.js");
-//const mainFunction = require("./mainFunction.js");
+const mainFunction = require("./MainFunction.js");
 
 bot.on("message", mainFunction.receiveMessage);
 
