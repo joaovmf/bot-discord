@@ -2,6 +2,11 @@ const Discord = require("discord.js");
 const commands = require("../resources/commands.js");
 const functions = require("./functions.js");
 
+
+/**
+ * Define a ação a ser executada com base no conteúdo da mensagem
+ * @param {Discord.Message} message - A mensagem recebida pelo BOT do Discord
+ */
 receiveMessage = (message) => {
   const { channel, content, author } = message;
   if (author.bot == false) {
