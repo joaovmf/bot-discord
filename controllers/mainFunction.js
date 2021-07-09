@@ -1,13 +1,13 @@
 const Discord = require("discord.js");
 const commands = require("../resources/commands.js");
 const functions = require("./functions.js");
-
+const api = require('../api/starwars')
 
 /**
  * Define a ação a ser executada com base no conteúdo da mensagem
  * @param {Discord.Message} message - A mensagem recebida pelo BOT do Discord
  */
-receiveMessage = (message) => {
+const receiveMessage = async (message) => {
   const { channel, content, author } = message;
   if (author.bot == false) {
     const authorMsg = author.username;
@@ -64,6 +64,21 @@ receiveMessage = (message) => {
       case "!spin":
         functions.filterByType(content.substring(1, 1000), channel);
         break;
+        case '!personagens':
+          await api.getPeople(channel)     
+          break
+        case '!planetas':
+          await api.getPlanets(channel)     
+          break
+        case '!naves':
+          await api.getStarships(channel)     
+          break
+        case '!especies':
+          await api.getSpecies(channel)     
+          break
+        case '!veiculos':
+          await api.getVehicles(channel)     
+          break
       default:
         channel.send(`Este comando não é válido, ${authorMsg}. Por favor digite "!iniciar" para ver minha lista completa de comandos. Que a força esteja com você!`);
     }

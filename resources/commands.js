@@ -28,6 +28,16 @@ const commands = [`!starwars = mostra todos os filmes por ordem de lançamento.
 
 !starwars10 = mostra o primeiro filme Spin-off lançado.
 
-!starwars11 = mostra o segundo filme Spin-off lançado.`]
+!starwars11 = mostra o segundo filme Spin-off lançado.
+
+!personagens = mostra a lista de todos os personagens.
+
+!planetas = mostra a lista de todos os planetas.
+
+!naves = mostra a lista de todas as naves.
+
+!especies = mostra a lista de todas as especies.
+
+!veiculos = mostra a lista de todos os veiculos.`]
 
 module.exports = commands
