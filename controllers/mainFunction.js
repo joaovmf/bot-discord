@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const commands = require("./resources/commands.js");
+const commands = require("../resources/commands.js");
 const functions = require("./functions.js");
 
 

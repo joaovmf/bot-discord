@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const movies = require("./resources/movies.json");
+const movies = require("../resources/movies.json");
 const textFooter = "Desenvolvido por João Victor de Medeiros.";
 
 /**
