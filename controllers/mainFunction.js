@@ -66,17 +66,83 @@ const receiveMessage = async (message) => {
         case '!personagens':
           await api.getPeople(channel)     
           break
+        case '!personagens2':
+          await api.getPeopleByPage(channel, 2)     
+          break
+        case '!personagens3':
+          await api.getPeopleByPage(channel, 3)     
+          break
+        case '!personagens4':
+          await api.getPeopleByPage(channel, 4)     
+          break
+        case '!personagens5':
+          await api.getPeopleByPage(channel, 5)     
+          break
+        case '!personagens6':
+          await api.getPeopleByPage(channel, 6)     
+          break
+        case '!personagens7':
+          await api.getPeopleByPage(channel, 7)     
+          break
+        case '!personagens8':
+          await api.getPeopleByPage(channel, 8)     
+          break
+        case '!personagens9':
+          await api.getPeopleByPage(channel, 9)     
+          break
         case '!planetas':
           await api.getPlanets(channel)     
+          break
+        case '!planetas2':
+          await api.getPlanetsByPage(channel, 2)     
+          break
+        case '!planetas3':
+          await api.getPlanetsByPage(channel, 3)     
+          break
+        case '!planetas4':
+          await api.getPlanetsByPage(channel, 4)     
+          break
+        case '!planetas5':
+          await api.getPlanetsByPage(channel, 5)     
+          break
+        case '!planetas6':
+          await api.getPlanetsByPage(channel, 6)     
           break
         case '!naves':
           await api.getStarships(channel)     
           break
+        case '!naves2':
+          await api.getStarshipsByPage(channel, 2)     
+          break
+        case '!naves3':
+          await api.getStarshipsByPage(channel, 3)     
+          break
+        case '!naves4':
+          await api.getStarshipsByPage(channel, 4)     
+          break
         case '!especies':
           await api.getSpecies(channel)     
           break
+        case '!especies2':
+          await api.getSpeciesByPage(channel, 2)     
+          break
+        case '!especies3':
+          await api.getSpeciesByPage(channel, 3)     
+          break
+        case '!especies4':
+          await api.getSpeciesByPage(channel, 4)     
+          break
         case '!veiculos':
           await api.getVehicles(channel)     
+          break
+        case '!veiculos2':
+          await api.getVehiclesByPage(channel, 2)     
+          break
+        case '!veiculos3':
+          await api.getVehiclesByPage(channel, 3)     
+          break
+        case '!veiculos4':
+          await api.getVehiclesByPage(channel, 4)     
           break
       default:
         channel.send(`Este comando não é válido, ${authorMsg}. Por favor digite "!iniciar" para ver minha lista completa de comandos. Que a força esteja com você!`);

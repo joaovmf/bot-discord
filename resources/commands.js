@@ -30,14 +30,58 @@ const commands = [`!starwars = mostra todos os filmes por ordem de lançamento.
 
 !starwars11 = mostra o segundo filme Spin-off lançado.
 
-!personagens = mostra a lista de todos os personagens.
+!personagens = mostra a primeira página da lista de personagens e quantos tem no total.
 
-!planetas = mostra a lista de todos os planetas.
+!personagens2 = mostra a página 2 da lista de personagens.
 
-!naves = mostra a lista de todas as naves.
+!personagens3 = mostra a página 3 da lista de personagens.
 
-!especies = mostra a lista de todas as especies.
+!personagens4 = mostra a página 4 da lista de personagens.
 
-!veiculos = mostra a lista de todos os veiculos.`]
+!personagens5 = mostra a página 5 da lista de personagens.
+
+!personagens6 = mostra a página 6 da lista de personagens.
+
+!personagens7 = mostra a página 7 da lista de personagens.
+
+!personagens8 = mostra a página 8 da lista de personagens.
+
+!personagens9 = mostra a página 9 da lista de personagens.
+
+!planetas = mostra a primeira página da lista de planetas e quantos tem no total.
+
+!planetas2 = mostra a página 2 da lista de planetas.
+
+!planetas3 = mostra a página 3 da lista de planetas.
+
+!planetas4 = mostra a página 4 da lista de planetas.
+
+!planetas5 = mostra a página 5 da lista de planetas.
+
+!planetas6 = mostra a página 6 da lista de planetas.
+
+!naves = mostra a primeira página da lista de naves e quantas tem no total.
+
+!naves2 = mostra a página 2 da lista de naves.
+
+!naves3 = mostra a página 3 da lista de naves.
+
+!naves4 = mostra a página 4 da lista de naves.
+
+!especies = mostra a primeira página da lista de especies e quantas tem no total.
+
+!especies2 = mostra a página 2 da lista de especies.
+
+!especies3 = mostra a página 3 da lista de especies.
+
+!especies4 = mostra a página 4 da lista de especies.
+
+!veiculos = mostra a primeira página da lista de veiculos e quantos tem no total.
+
+!veiculos2 = mostra a página 2 da lista de veiculos.
+
+!veiculos3 = mostra a página 3 da lista de veiculos.
+
+!veiculos4 = mostra a página 4 da lista de veiculos.`]
 
 module.exports = commands
