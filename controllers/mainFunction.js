@@ -16,12 +16,7 @@ const receiveMessage = async (message) => {
     switch (arrayContent[0]) {
       case "!iniciar":
         channel.send(`Olá! Seja muito bem vindo, ${authorMsg}. Eu sou o bot do João. Abaixo você verá a minha lista completa de comandos:`);
-        const msg = new MessageEmbed();
-        msg.setTitle("LISTA DE COMANDOS  📖");
-        msg.setColor("#4287f5");
-        msg.setDescription(commands);
-        msg.setThumbnail('https://imagensemoldes.com.br/wp-content/uploads/2020/09/Imagem-de-Livros-PNG.png')
-        channel.send(msg);
+        channel.send(functions.showCommands())
         break;
       case "!starwarstodos":
           channel.send("Essa é uma lista de todos os filmes em ordem de lançamento das trilogias e por ultimo os filmes Spin-off!  🎞");

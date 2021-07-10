@@ -1,5 +1,6 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const movies = require("../resources/movies.json");
+const commands = require("../resources/commands.js");
 
 const textFooter = "Desenvolvido por João Victor de Medeiros.";
 
@@ -7,47 +8,61 @@ const textFooter = "Desenvolvido por João Victor de Medeiros.";
  * Função que faz o bot enviar a mensagem.
  * @param {string} movie - Filme.
  */
- const msgMovie = (movie) => {
-    const msg = new Discord.MessageEmbed();
-    msg.setTitle(movie.name);
-    msg.setDescription(movie.synopsis);
-    msg.setColor(movie.color);
-    msg.setImage(movie.image);
-    msg.setThumbnail(movie.image2);
-    msg.setFooter(textFooter);
-    return msg;
-  };
+const msgMovie = (movie) => {
+  const msg = new MessageEmbed();
+  msg.setTitle(movie.name);
+  msg.setDescription(movie.synopsis);
+  msg.setColor(movie.color);
+  msg.setImage(movie.image);
+  msg.setThumbnail(movie.image2);
+  msg.setFooter(textFooter);
+  return msg;
+};
 
 /**
- * Função que faz o bot mostrar todos os filmes do arquivo JSON. 
+ * Função que faz o bot mostrar todos os filmes do arquivo JSON.
  * @param {string} channel - Canal da mensagem.
  */
- const showAll = (channel) => {
-    movies.map((movie) => {
+const showAll = (channel) => {
+  movies.map((movie) => {
+    channel.send(msgMovie(movie));
+  });
+};
+
+/**
+ * Função que filtra os filmes por ID e faz o bot mostrar apenas um.
+ * @param {number} param - ID do filme.
+ * @param {string} channel - Canal da mensagem.
+ */
+const findById = (param, channel) => {
+  channel.send(msgMovie(movies.find((movie) => movie.id == param)));
+};
+
+/**
+ * Função que filtra os filmes por tipo e faz o bot mostrar apenas os que são do mesmo tipo.
+ * @param {string} param - Tipo do filme.
+ * @param {string} channel - Canal da mensagem.
+ */
+const filterByType = (param, channel) => {
+  movies
+    .filter((movie) => movie.type == param)
+    .map((movie) => {
       channel.send(msgMovie(movie));
     });
-  };
-  
-  /**
-   * Função que filtra os filmes por ID e faz o bot mostrar apenas um.
-   * @param {number} param - ID do filme.
-   * @param {string} channel - Canal da mensagem.
-   */
-  const findById = (param, channel) => {
-    channel.send(msgMovie(movies.find((movie) => movie.id == param)));
-  };
-  
-  /**
-   * Função que filtra os filmes por tipo e faz o bot mostrar apenas os que são do mesmo tipo.
-   * @param {string} param - Tipo do filme.
-   * @param {string} channel - Canal da mensagem.
-   */
-  const filterByType = (param, channel) => {
-    movies
-      .filter((movie) => movie.type == param)
-      .map((movie) => {
-        channel.send(msgMovie(movie));
-      });
-  };
+};
 
-  module.exports = {msgMovie, filterByType, findById, showAll}
+/**
+ * Função que faz o bot mostrar a lista de comandos.
+ */
+const showCommands = () => {
+  const msg = new MessageEmbed();
+  msg.setTitle("LISTA DE COMANDOS  📖");
+  msg.setColor("#4287f5");
+  msg.setDescription(commands);
+  msg.setThumbnail(
+    "https://imagensemoldes.com.br/wp-content/uploads/2020/09/Imagem-de-Livros-PNG.png"
+  );
+  return msg;
+};
+
+module.exports = { msgMovie, filterByType, findById, showAll, showCommands };
