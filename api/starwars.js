@@ -3,7 +3,6 @@ const base_url = 'https://swapi.dev/api/'
 const { MessageEmbed } = require('discord.js')
 const apiVariables = require('../resources/apiVariables.json')
 
-
 /**
  * Função assíncrona que consome API do starwars retornando todos os filmes.
  * @param {Discord.Message} channel - A mensagem enviada pelo BOT do Discord.
@@ -35,7 +34,6 @@ const getStarships = async (channel) => await getAllMovies(channel, 'starships',
 const getVehicles = async (channel) => await getAllMovies(channel, 'vehicles', 'Veículos','🚎', apiVariables.imageVehicles, apiVariables.colorVehicles)
 const getSpecies = async (channel) => await getAllMovies(channel, 'species', 'Espécies', '🧟‍♂️', apiVariables.imageSpecies, apiVariables.colorSpecies)
 
-
 /**
  * Função assíncrona que consome API do starwars retornando os filmes por página.
  * @param {Discord.Message} channel - A mensagem enviada pelo BOT do Discord.
@@ -65,6 +63,5 @@ const getPlanetsByPage = async (channel, param) => await getMoviesByPage(channel
 const getStarshipsByPage = async (channel, param) => await getMoviesByPage(channel, `starships/?page=${param}`, 'Naves', '🚀', apiVariables.imageStarship, apiVariables.colorStarship)
 const getVehiclesByPage = async (channel, param) => await getMoviesByPage(channel, `vehicles/?page=${param}`, 'Veículos','🚎', apiVariables.imageVehicles, apiVariables.colorVehicles)
 const getSpeciesByPage = async (channel, param) => await getMoviesByPage(channel, `species/?page=${param}`, 'Espécies', '🧟‍♂️', apiVariables.imageSpecies, apiVariables.colorSpecies)
-
 
 module.exports = { getPeople, getPlanets, getStarships, getVehicles, getSpecies, getPeopleByPage, getPlanetsByPage, getStarshipsByPage, getVehiclesByPage, getSpeciesByPage}

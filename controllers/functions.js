@@ -33,7 +33,7 @@ const textFooter = "Desenvolvido por João Victor de Medeiros.";
    * @param {number} param - ID do filme.
    * @param {string} channel - Canal da mensagem.
    */
-  const filterById = (param, channel) => {
+  const findById = (param, channel) => {
     channel.send(msgMovie(movies.find((movie) => movie.id == param)));
   };
   
@@ -50,4 +50,4 @@ const textFooter = "Desenvolvido por João Victor de Medeiros.";
       });
   };
 
-  module.exports = {msgMovie, filterByType, filterById, showAll}
+  module.exports = {msgMovie, filterByType, findById, showAll}
