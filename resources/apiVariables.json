@@ -1,0 +1,12 @@
+{
+    "imagePeople": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/chewbacca-300x300.png",
+    "colorPeople": "#4287f5",
+    "imagePlanets": "https://static.wikia.nocookie.net/ptstarwars/images/3/3d/DathomirPlaneta.png/revision/latest/smart/width/250/height/250?cb=20171207203248",
+    "colorPlanets": "#19fa05",
+    "imageStarship": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Millennium-Falcon-Star-Wars-PNG.png",
+    "colorStarship": "#e000ca",
+    "imageVehicles": "https://http2.mlstatic.com/D_NQ_NP_739390-MLB27994675829_082018-O.jpg",
+    "colorVehicles": "#f2ea05",
+    "imageSpecies": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Desenho-Star-Wars-PNG.png",
+    "colorSpecies": "#ff700a"
+}
