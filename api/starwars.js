@@ -8,6 +8,9 @@ const apiVariables = require('../resources/apiVariables.json')
  * @param {Discord.Message} channel - A mensagem enviada pelo BOT do Discord.
  * @param {string} endpoint - A palavra que substitui o fim da url para fazer a consulta
  * @param {string} title - Título que aparece na mensagem do bot. 
+ * @param {string} emoji - Emoji que aparece ao lado do título.
+ * @param {string} image - Imagem que aparece no inicio de cada categoria.
+ * @param {string} color - Cor de cada categoria.
  */
 const getApiStarWars = async (channel, endpoint, title, emoji, image, color) => {
   const response = await axios.get(`${base_url}${endpoint}`)
