@@ -1,4 +1,3 @@
-  
 const axios = require('axios');
 const base_url = 'https://swapi.dev/api/'
 const { MessageEmbed } = require('discord.js')
@@ -13,14 +12,15 @@ const { MessageEmbed } = require('discord.js')
 const getApiStarWars = async (channel, endpoint, title) => {
   const response = await axios.get(`${base_url}${endpoint}`)
   const { data } = response
-  channel.send(new MessageEmbed()
-    .setTitle(`${title} de Star Wars`)
-    .setDescription(`
+  const msg = new MessageEmbed();
+    msg.setTitle(`${title} de Star Wars`)
+    msg.setDescription(`
   Total de ${title}: ${data.count}
 ${title}:
 ${data.results.map(result => ` - ${result.name || result.title}
 `).join('')}  
-  `))
+  `)
+  channel.send(msg);
 }
 
 const getPeople = async (channel) => await getApiStarWars(channel, 'people', 'Personagens')

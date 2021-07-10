@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const commands = require("../resources/commands.js");
 const functions = require("./functions.js");
 const api = require('../api/starwars')
@@ -14,12 +14,11 @@ const receiveMessage = async (message) => {
     switch (content) {
       case "!iniciar":
         channel.send(`Olá! Seja muito bem vindo, ${authorMsg}. Eu sou o bot do João. Abaixo você verá a minha lista completa de comandos:`);
-        const msg = new Discord.MessageEmbed();
+        const msg = new MessageEmbed();
         msg.setTitle("LISTA DE COMANDOS");
         msg.setColor("#4287f5");
         msg.setDescription(commands);
         channel.send(msg);
-        console.log(content[9]);
         break;
       case "!starwars":
           channel.send("Essa é uma lista de todos os filmes em ordem de lançamento das trilogias e por ultimo os filmes Spin-off!");
