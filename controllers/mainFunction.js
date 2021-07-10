@@ -15,13 +15,13 @@ const receiveMessage = async (message) => {
       case "!iniciar":
         channel.send(`Olá! Seja muito bem vindo, ${authorMsg}. Eu sou o bot do João. Abaixo você verá a minha lista completa de comandos:`);
         const msg = new MessageEmbed();
-        msg.setTitle("LISTA DE COMANDOS");
+        msg.setTitle("LISTA DE COMANDOS  📖");
         msg.setColor("#4287f5");
         msg.setDescription(commands);
         channel.send(msg);
         break;
       case "!starwars":
-          channel.send("Essa é uma lista de todos os filmes em ordem de lançamento das trilogias e por ultimo os filmes Spin-off!");
+          channel.send("Essa é uma lista de todos os filmes em ordem de lançamento das trilogias e por ultimo os filmes Spin-off!  🎞");
           functions.showAll(channel);
         break;
       case "!starwars1":
