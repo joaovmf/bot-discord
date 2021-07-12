@@ -1,12 +1,12 @@
 {
-  "imagePeople": "http://especiais.ne10.uol.com.br/starwars/wp-content/uploads/2015/12/chewbacca-300x300.png",
+  "imagePeople": "people",
   "colorPeople": "#4287f5",
-  "imagePlanets": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Figura-Planeta-PNG.png",
+  "imagePlanets": "planet",
   "colorPlanets": "#19fa05",
-  "imageStarship": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Millennium-Falcon-Star-Wars-PNG.png",
+  "imageStarship": "starship",
   "colorStarship": "#e000ca",
-  "imageVehicles": "https://http2.mlstatic.com/D_NQ_NP_739390-MLB27994675829_082018-O.jpg",
+  "imageVehicles": "vehicle",
   "colorVehicles": "#f2ea05",
-  "imageSpecies": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Desenho-Star-Wars-PNG.png",
+  "imageSpecies": "specie",
   "colorSpecies": "#ff700a"
 }
