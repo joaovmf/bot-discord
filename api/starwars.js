@@ -55,6 +55,7 @@ ${data.results.map(result => ` - ${result.name || result.title}
   `)
   msg.setColor(color);
   msg.setThumbnail(image);
+  msg.setFooter(`Página: ${endpoint.split("").filter(n => (Number(n) || n == 0)).join("")}. `)
   channel.send(msg);
 }
 
