@@ -63,6 +63,9 @@ const showCommands = () => {
   msg.setThumbnail(
     "https://imagensemoldes.com.br/wp-content/uploads/2020/09/Imagem-de-Livros-PNG.png"
   );
+  msg.setFooter(`Todos os filmes possuem links em seus títulos, redirecionando para seus trailers.
+Todas as listas possuem links em seus titulos, redirecionando para uma página relacionada.`
+)
   return msg;
 };
 
