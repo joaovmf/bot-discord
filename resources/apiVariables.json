@@ -1,12 +1,17 @@
 {
   "imagePeople": "people",
+  "urlPeople": "http://especiais.ne10.uol.com.br/starwars/personagens/",
   "colorPeople": "#4287f5",
   "imagePlanets": "planet",
+  "urlPlanets": "https://starwars.fandom.com/pt/wiki/Anexo:Lista_de_planetas_de_Star_Wars",
   "colorPlanets": "#19fa05",
   "imageStarship": "starship",
-  "colorStarship": "#e000ca",
+  "urlStarship": "https://super.abril.com.br/especiais/star-wars-a-evolucao-das-naves-ao-longo-da-saga/",
+  "colorStarships": "#e000ca",
   "imageVehicles": "vehicle",
+  "urlVehicles": "http://casadosherois.weebly.com/filmes/os-veiculos-mais-famosos-de-star-wars",
   "colorVehicles": "#f2ea05",
   "imageSpecies": "specie",
+  "urlSpecies": "https://starwars.fandom.com/pt/wiki/Categoria:Esbo%C3%A7os_de_ra%C3%A7as_e_esp%C3%A9cies",
   "colorSpecies": "#ff700a"
 }

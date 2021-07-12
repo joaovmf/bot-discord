@@ -10,6 +10,7 @@ const textFooter = "Desenvolvido por João Victor de Medeiros.";
  */
 const msgMovie = (movie) => {
   const msg = new MessageEmbed();
+  msg.setURL(movie.trailer)
   msg.setTitle(movie.name);
   msg.setDescription(movie.synopsis);
   msg.setColor(movie.color);
