@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const mainFunction = require("./controllers/MainFunction.js");
+const mainFunction = require("./controllers/mainFunction.js");
 require('dotenv/config');
 
 bot.on("message", mainFunction.receiveMessage);
