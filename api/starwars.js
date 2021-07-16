@@ -21,8 +21,8 @@ const getAllApi = async (channel, endpoint, title, emoji, url, color, image) => 
     msg.setTitle(`${title} ${emoji}`)
     msg.setDescription(`
   Total de ${title}: ${data.count}
-  As páginas sãos de 10 em 10. 
-  Digite o tipo e o numero da página para ver a lista.
+  As páginas mostram 10 itens por vez.
+  Digite o tipo e o numero da página para mostra-lá.
   `)
   msg.setThumbnail(image);
   msg.setColor(color);
