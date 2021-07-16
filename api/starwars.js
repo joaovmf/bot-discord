@@ -12,7 +12,7 @@ const apiVariables = require('../resources/apiVariables.json')
  * @param {string} image - Imagem que aparece no inicio de cada categoria.
  * @param {string} color - Cor de cada categoria.
  */
-const getAllMovies = async (channel, endpoint, title, emoji, url, image, color) => {
+const getAllMovies = async (channel, endpoint, title, emoji, url, color) => {
   const response = await axios.get(`${base_url}${endpoint}`)
   const { data } = response
   const msg = new MessageEmbed();
@@ -25,16 +25,14 @@ ${data.results.map(result => ` - ${result.name || result.title}
 `).join('')}  
   `)
   msg.setColor(color);
-  msg.attachFiles([`../assets/${image}.png`])
-  msg.setThumbnail(`attachment://${image}.png`)
   channel.send(msg);
 }
 
-const getPeople = async (channel) => await getAllMovies(channel, 'people', 'Personagens', ' 🦹‍♂️' , apiVariables.urlPeople, apiVariables.imagePeople, apiVariables.colorPeople)
-const getPlanets = async (channel) => await getAllMovies(channel, 'planets', 'Planetas', ' 🪐', apiVariables.urlPlanets, apiVariables.imagePlanets, apiVariables.colorPlanets)
-const getStarships = async (channel) => await getAllMovies(channel, 'starships', 'Naves', ' 🚀', apiVariables.urlStarships, apiVariables.imageStarship, apiVariables.colorStarship)
-const getVehicles = async (channel) => await getAllMovies(channel, 'vehicles', 'Veículos',' 🚗', apiVariables.urlVehicles, apiVariables.imageVehicles, apiVariables.colorVehicles)
-const getSpecies = async (channel) => await getAllMovies(channel, 'species', 'Espécies', ' 🧟‍♂️', apiVariables.urlSpecies, apiVariables.imageSpecies, apiVariables.colorSpecies)
+const getPeople = async (channel) => await getAllMovies(channel, 'people', 'Personagens', ' 🦹‍♂️' , apiVariables.urlPeople, apiVariables.colorPeople)
+const getPlanets = async (channel) => await getAllMovies(channel, 'planets', 'Planetas', ' 🪐', apiVariables.urlPlanets, apiVariables.colorPlanets)
+const getStarships = async (channel) => await getAllMovies(channel, 'starships', 'Naves', ' 🚀', apiVariables.urlStarships, apiVariables.colorStarship)
+const getVehicles = async (channel) => await getAllMovies(channel, 'vehicles', 'Veículos',' 🚗', apiVariables.urlVehicles, apiVariables.colorVehicles)
+const getSpecies = async (channel) => await getAllMovies(channel, 'species', 'Espécies', ' 🧟‍♂️', apiVariables.urlSpecies, apiVariables.colorSpecies)
 
 /**
  * Função assíncrona que consome API do starwars retornando os filmes por página.
