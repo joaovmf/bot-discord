@@ -31,11 +31,12 @@ const receiveMessage = async (message) => {
       case "!spin":
         functions.filterByType(content.substring(1, 1000), channel);
         break;
-        case '!personagenstodos':
-          await api.getPeople(channel)     
-          break
         case '!personagens':
-          await api.getPeopleByPage(channel, arrayContent[1])
+          if (arrayContent.length == 2) {
+            await api.getPeopleByPage(channel, arrayContent[1])
+          } else {
+           await api.getPeople(channel)
+          }
           break;
         case '!planetastodos':
           await api.getPlanets(channel)     
