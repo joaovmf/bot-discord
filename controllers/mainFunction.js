@@ -20,13 +20,14 @@ const receiveMessage = async (message) => {
         channel.send(`Olá! Seja muito bem vindo, ${authorMsg}. Eu sou o bot do João. Abaixo você verá a minha lista completa de comandos:`);
         channel.send(functions.showCommands())
         break;
-      case "!starwarstodos":
-          channel.send("Essa é uma lista de todos os filmes em ordem de lançamento das trilogias e por ultimo os filmes Spin-off!  🎞");
-          functions.showAll(channel);
-        break;
-      case "!starwars":
-        functions.findById(arrayContent[1], channel)
-        break;
+        case "!starwars":
+          if (arrayContent.length == 2) {
+            functions.findById(arrayContent[1], channel)
+          } else {
+            channel.send("Essa é uma lista de todos os filmes em ordem de lançamento das trilogias e por ultimo os filmes Spin-off!  🎞");
+            functions.showAll(channel);
+          }
+          break;
       case "!classicos":
       case "!prequel":
       case "!novos":
