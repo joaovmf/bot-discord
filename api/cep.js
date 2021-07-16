@@ -10,7 +10,7 @@ const getAddressByCep = async (channel, cep) => {
     Cidade: ${cidade}
     Estado: ${estado}`)
     } catch (error) {
-        channel.send(new MessageEmbed().setTitle('Resultado não encontrado').setDescription('Tente novamente com uma nova pesquisa'))
+        channel.send('Resultado não encontrado, tente novamente com uma nova pesquisa')
     }
 }
 
