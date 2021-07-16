@@ -1,4 +1,8 @@
-const commands = [`!starwarstodos = mostra todos os filmes por ordem de lançamento.
+const commands = [`!starwars = mostra todos os filmes por ordem de lançamento.
+
+!starwars + número = mostra apenas um filme de acordo com a numeração.
+Exemplo: !starwars 1 = mostrará o primeiro filme lançado. 
+OBS: Só exsitem 11 filmes de Star Wars. 
 
 !classicos = mostra a trilogia clássica. 
 
@@ -7,10 +11,6 @@ const commands = [`!starwarstodos = mostra todos os filmes por ordem de lançame
 !novos = mostra a trilogia mais recente. 
 
 !spin = mostra os filmes Spin-off.
-
-!starwars número = mostra apenas um filme de acordo com a numeração.
-Exemplo: !starwars 1 = mostrará o primeiro filme lançado. 
-OBS: Só exsitem 11 filmes de Star Wars. 
 
 !personagenstodos = mostra a primeira página da lista de personagens e quantos tem no total.
 
