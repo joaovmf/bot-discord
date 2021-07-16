@@ -45,7 +45,7 @@ const getSpecies = async (channel) => await getAllMovies(channel, 'species', 'Es
  * @param {string} image - Imagem que aparece no inicio de cada categoria.
  * @param {string} color - Cor de cada categoria.
  */
-const getMoviesByPage = async (channel, endpoint, title, emoji, url, image, color) => {
+const getMoviesByPage = async (channel, endpoint, title, emoji, url, color) => {
   const response = await axios.get(`${base_url}${endpoint}`)
   const { data } = response
   const msg = new MessageEmbed();
@@ -63,10 +63,10 @@ ${data.results.map(result => ` - ${result.name || result.title}
   channel.send(msg);
 }
 
-const getPeopleByPage = async (channel, param) => await getMoviesByPage(channel, `people/?page=${param}`, 'Personagens', ' 🦹‍♂️' , apiVariables.urlPeople, ' ', apiVariables.colorPeople)
-const getPlanetsByPage = async (channel, param) => await getMoviesByPage(channel, `planets/?page=${param}`, 'Planetas', ' 🪐', apiVariables.urlPlanets, ' ', apiVariables.colorPlanets)
-const getStarshipsByPage = async (channel, param) => await getMoviesByPage(channel, `starships/?page=${param}`, 'Naves', ' 🚀', apiVariables.urlStarships, ' ', apiVariables.colorStarship)
-const getVehiclesByPage = async (channel, param) => await getMoviesByPage(channel, `vehicles/?page=${param}`, 'Veículos',' 🚗', apiVariables.urlVehicles, ' ', apiVariables.colorVehicles)
-const getSpeciesByPage = async (channel, param) => await getMoviesByPage(channel, `species/?page=${param}`, 'Espécies', ' 🧟‍♂️', apiVariables.urlSpecies, ' ', apiVariables.colorSpecies)
+const getPeopleByPage = async (channel, param) => await getMoviesByPage(channel, `people/?page=${param}`, 'Personagens', ' 🦹‍♂️' , apiVariables.urlPeople, apiVariables.colorPeople)
+const getPlanetsByPage = async (channel, param) => await getMoviesByPage(channel, `planets/?page=${param}`, 'Planetas', ' 🪐', apiVariables.urlPlanets, apiVariables.colorPlanets)
+const getStarshipsByPage = async (channel, param) => await getMoviesByPage(channel, `starships/?page=${param}`, 'Naves', ' 🚀', apiVariables.urlStarships, apiVariables.colorStarship)
+const getVehiclesByPage = async (channel, param) => await getMoviesByPage(channel, `vehicles/?page=${param}`, 'Veículos',' 🚗', apiVariables.urlVehicles, apiVariables.colorVehicles)
+const getSpeciesByPage = async (channel, param) => await getMoviesByPage(channel, `species/?page=${param}`, 'Espécies', ' 🧟‍♂️', apiVariables.urlSpecies, apiVariables.colorSpecies)
 
 module.exports = { getPeople, getPlanets, getStarships, getVehicles, getSpecies, getPeopleByPage, getPlanetsByPage, getStarshipsByPage, getVehiclesByPage, getSpeciesByPage}
