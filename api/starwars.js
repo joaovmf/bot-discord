@@ -24,7 +24,7 @@ ${title}:
 ${data.results.map(result => ` - ${result.name || result.title}
 `).join('')}  
   `)
-  msg.setImage(image);
+  msg.setThumbnail(image);
   msg.setColor(color);
   channel.send(msg);
 }
@@ -54,7 +54,7 @@ const getMoviesByPage = async (channel, endpoint, title, emoji, url, color, imag
 ${data.results.map(result => ` - ${result.name || result.title}
 `).join('')}  
   `)
-  msg.setImage(image);
+  msg.setThumbnail(image);
   msg.setColor(color);
   msg.setFooter(`Página: ${endpoint.split("").filter(n => (Number(n) || n == 0)).join("")}. `)
   channel.send(msg);
