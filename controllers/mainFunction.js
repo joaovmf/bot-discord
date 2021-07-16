@@ -1,10 +1,8 @@
-  
 const { MessageEmbed } = require("discord.js");
 const commands = require("../resources/commands.js");
 const functions = require("./functions.js");
 const api = require('../api/starwars')
-const apiCep = require('../api/cep')
-const apiGitHub = require('../api/github')
+const apiVariables = require ('../resources/apiVariables.json')
 
 /**
  * Define a ação a ser executada com base no conteúdo da mensagem
@@ -20,59 +18,30 @@ const receiveMessage = async (message) => {
         channel.send(`Olá! Seja muito bem vindo, ${authorMsg}. Eu sou o bot do João. Abaixo você verá a minha lista completa de comandos:`);
         channel.send(functions.showCommands())
         break;
-        case "!starwars":
-          if (arrayContent.length == 2) {
-            functions.findById(arrayContent[1], channel)
-          } else {
-            channel.send("Essa é uma lista de todos os filmes em ordem de lançamento das trilogias e por ultimo os filmes Spin-off!  🎞");
-            functions.showAll(channel);
-          }
-          break;
+      case "!starwars":
+        if (arrayContent.length == 2) {
+          functions.findById(arrayContent[1], channel)
+        } else {
+          channel.send("Essa é uma lista de todos os filmes em ordem de lançamento das trilogias e por ultimo os filmes Spin-off!  🎞");
+          functions.showAll(channel);
+        }
+        break;
       case "!classicos":
       case "!prequel":
       case "!novos":
       case "!spin":
         functions.filterByType(content.substring(1, 1000), channel);
         break;
-        case '!personagenstodos':
-          await api.getPeople(channel)     
-          break
-        case '!personagens':
-          await api.getPeopleByPage(channel, arrayContent[1])
-          break;
-        case '!planetastodos':
-          await api.getPlanets(channel)     
-          break
-        case '!planetas':
-          await api.getPlanetsByPage(channel, arrayContent[1])     
-          break
-        case '!navestodas':
-          await api.getStarships(channel)     
-          break
-        case '!naves':
-          await api.getStarshipsByPage(channel, arrayContent[1])     
-          break
-        case '!especiestodas':
-          await api.getSpecies(channel)     
-          break
-        case '!especies':
-          await api.getSpeciesByPage(channel, arrayContent[1])     
-          break
-        case '!veiculostodos':
-          await api.getVehicles(channel)     
-          break
-        case '!veiculos':
-          await api.getVehiclesByPage(channel, arrayContent[1])     
-          break
-        case '!cep':
-          await apiCep.getAddressByCep(channel, arrayContent[1])
-          break
-        case '!github':
-          await apiGitHub.getGitHubByName(channel, arrayContent[1])
-          break
+      case '!personagens':
+      case '!planetas':
+      case '!naves':
+      case '!especies':
+      case '!veiculos':
+        await api.getApiByPage(channel, arrayContent[0], arrayContent[1], apiVariables.image)
+        break
       default:
         channel.send(`Este comando não é válido, ${authorMsg}. Por favor digite "!iniciar" para ver minha lista completa de comandos. Que a força esteja com você!`);
-        break
+        break;
     }
   }
 };
