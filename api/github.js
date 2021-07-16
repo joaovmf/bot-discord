@@ -5,7 +5,7 @@ getGitHubByName = async (channel, username) => {
     const response = await axios.get(`https://api.github.com/users/${username}`)
     const { data } = response
     channel.send(new MessageEmbed()
-    .setTitle(username)
+    .setTitle(data.name)
     .setURL(data.html_url)
     .setDescription(data.bio)
     .setFooter(`Repositórios Públicos:${data.public_repos}
