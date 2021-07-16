@@ -4,6 +4,7 @@ const commands = require("../resources/commands.js");
 const functions = require("./functions.js");
 const api = require('../api/starwars')
 const apiCep = require('../api/cep')
+const apiGitHub = require('../api/github')
 
 /**
  * Define a ação a ser executada com base no conteúdo da mensagem
@@ -64,9 +65,13 @@ const receiveMessage = async (message) => {
           break
         case '!cep':
           await apiCep.getAddressByCep(channel, arrayContent[1])
+          break
+        case '!github':
+          await apiGitHub.getGitHubByName(channel, arrayContent[1])
+          break
       default:
         channel.send(`Este comando não é válido, ${authorMsg}. Por favor digite "!iniciar" para ver minha lista completa de comandos. Que a força esteja com você!`);
-        break;
+        break
     }
   }
 };
