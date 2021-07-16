@@ -12,33 +12,33 @@ OBS: Só exsitem 11 filmes de Star Wars.
 
 !spin = mostra os filmes Spin-off.
 
-!personagenstodos = mostra a primeira página da lista de personagens e quantos tem no total.
+!personagens = mostra a primeira página da lista de personagens e quantos tem no total.
 
-!personagens número = mostra a página digitada da lista de personagens. 
+!personagens + número = mostra a página digitada da lista de personagens. 
 Exemplo: !personagens 2 = mostrará a segunda página da lista. 
 OBS: Só exsitem 9 páginas de personagens de Star Wars. 
 
-!planetastodos = mostra a primeira página da lista de planetas e quantos tem no total.
+!planetas = mostra a primeira página da lista de planetas e quantos tem no total.
 
-!planetas número = mostra a página digitada da lista de planetas. 
+!planetas + número = mostra a página digitada da lista de planetas. 
 Exemplo: !planetas 2 = mostrará a segunda página da lista. 
 OBS: Só exsitem 6 páginas de planetas de Star Wars. 
 
-!navestodas = mostra a primeira página da lista de naves e quantas tem no total.
+!naves = mostra a primeira página da lista de naves e quantas tem no total.
 
-!naves número = mostra a página digitada da lista de naves. 
+!naves + número = mostra a página digitada da lista de naves. 
 Exemplo: !naves 2 = mostrará a segunda página da lista. 
 OBS: Só exsitem 4 páginas de naves de Star Wars. 
 
-!especiestodas = mostra a primeira página da lista de especies e quantas tem no total.
+!especies = mostra a primeira página da lista de especies e quantas tem no total.
 
-!especies número = mostra a página digitada da lista de especies. 
+!especies + número = mostra a página digitada da lista de especies. 
 Exemplo: !especies 2 = mostrará a segunda página da lista. 
 OBS: Só exsitem 4 páginas de especies de Star Wars.
 
-!veiculostodos = mostra a primeira página da lista de veiculos e quantos tem no total.
+!veiculos = mostra a primeira página da lista de veiculos e quantos tem no total.
 
-!veiculos número = mostra a página digitada da lista de veiculos. 
+!veiculos + número = mostra a página digitada da lista de veiculos. 
 Exemplo: !veiculos 2 = mostrará a segunda página da lista. 
 OBS: Só exsitem 4 páginas de veiculos de Star Wars.`]
 

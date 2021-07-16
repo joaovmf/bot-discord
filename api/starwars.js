@@ -74,4 +74,4 @@ const getStarshipsByPage = async (channel, param) => await getApiByPage(channel,
 const getVehiclesByPage = async (channel, param) => await getApiByPage(channel, `vehicles/?page=${param}`, 'Veículos',' 🚗', apiVariables.urlVehicles, apiVariables.colorVehicles, apiVariables.imageVehicles)
 const getSpeciesByPage = async (channel, param) => await getApiByPage(channel, `species/?page=${param}`, 'Espécies', ' 🧟‍♂️', apiVariables.urlSpecies, apiVariables.colorSpecies, apiVariables.imageSpecies)
 
-module.exports = { getPeople, getPlanets, getStarships, getVehicles, getSpecies, getPeopleByPage, getPlanetsByPage, getStarshipsByPage, getVehiclesByPage, getSpeciesByPage}
+module.exports = { getPeople, getPlanets, getStarships, getVehicles, getSpecies, getPeopleByPage, getPlanetsByPage, getStarshipsByPage, getVehiclesByPage, getSpeciesByPage}  
