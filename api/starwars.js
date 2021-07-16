@@ -50,7 +50,6 @@ const getMoviesByPage = async (channel, endpoint, title, emoji, url, color) => {
     msg.setURL(url)
     msg.setTitle(`${title} ${emoji}`)
     msg.setDescription(`
-${title}:
 ${data.results.map(result => ` - ${result.name || result.title}
 `).join('')}  
   `)
