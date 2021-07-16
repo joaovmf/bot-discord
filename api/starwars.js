@@ -57,8 +57,6 @@ ${data.results.map(result => ` - ${result.name || result.title}
 `).join('')}  
   `)
   msg.setColor(color);
-  msg.attachFiles([`../assets/${image}.png`])
-  msg.setThumbnail(`attachment://${image}.png`)
   msg.setFooter(`Página: ${endpoint.split("").filter(n => (Number(n) || n == 0)).join("")}. `)
   channel.send(msg);
 }
