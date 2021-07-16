@@ -1,42 +1,17 @@
-[
-  {
-    "comando": "!personagens",
-    "image": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/people.png",
-    "url": "http://especiais.ne10.uol.com.br/starwars/personagens/",
-    "color": "#4287f5",
-    "title": "Personagens",
-    "emoji": "🦹‍♂️"
-  },
-  {
-    "comando": "!naves",
-    "image": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/starship.png",
-    "url": "https://super.abril.com.br/especiais/star-wars-a-evolucao-das-naves-ao-longo-da-saga/",
-    "color": "#e000ca",
-    "title": "Naves",
-    "emoji": "🚀"
-  },
-  {
-    "comando": "!planetas",
-    "image": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/planet.png",
-    "url": "https://starwars.fandom.com/pt/wiki/Anexo:Lista_de_planetas_de_Star_Wars",
-    "color": "#19fa05",
-    "title": "Planetas",
-    "emoji": "🪐"
-  },
-  {
-    "comando": "!veiculos",
-    "image": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/vehicle.png",
-    "url": "http://casadosherois.weebly.com/filmes/os-veiculos-mais-famosos-de-star-wars",
-    "color": "#f2ea05",
-    "title": "Veículos",
-    "emoji": "🚗"
-  },
-  {
-    "comando": "!especies",
-    "image": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Cartoon-Chewbacca-PNG-Star-Wars-PNG.png",
-    "url": "https://starwars.fandom.com/pt/wiki/Categoria:Esbo%C3%A7os_de_ra%C3%A7as_e_esp%C3%A9cies",
-    "color": "#ff700a",
-    "title": "Espécies",
-    "emoji": "🧟‍♂️"
-  }
-]
+{
+  "imagePeople": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/people.png",
+  "urlPeople": "http://especiais.ne10.uol.com.br/starwars/personagens/",
+  "colorPeople": "#4287f5",
+  "imagePlanets": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/planet.png",
+  "urlPlanets": "https://starwars.fandom.com/pt/wiki/Anexo:Lista_de_planetas_de_Star_Wars",
+  "colorPlanets": "#19fa05",
+  "imageStarship": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/starship.png",
+  "urlStarship": "https://super.abril.com.br/especiais/star-wars-a-evolucao-das-naves-ao-longo-da-saga/",
+  "colorStarships": "#e000ca",
+  "imageVehicles": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/vehicle.png",
+  "urlVehicles": "http://casadosherois.weebly.com/filmes/os-veiculos-mais-famosos-de-star-wars",
+  "colorVehicles": "#f2ea05",
+  "imageSpecies": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Cartoon-Chewbacca-PNG-Star-Wars-PNG.png",
+  "urlSpecies": "https://starwars.fandom.com/pt/wiki/Categoria:Esbo%C3%A7os_de_ra%C3%A7as_e_esp%C3%A9cies",
+  "colorSpecies": "#ff700a"
+}
