@@ -13,6 +13,7 @@ const apiVariables = require('../resources/apiVariables.json')
  * @param {string} color - Cor de cada categoria.
  */
 const getAllMovies = async (channel, endpoint, title, emoji, url, color, image) => {
+  try {
   const response = await axios.get(`${base_url}${endpoint}`)
   const { data } = response
   const msg = new MessageEmbed();
@@ -27,6 +28,9 @@ ${data.results.map(result => ` - ${result.name || result.title}
   msg.setThumbnail(image);
   msg.setColor(color);
   channel.send(msg);
+  }catch (error) {
+    channel.send(new MessageEmbed().setTitle('Resultado não encontrado').setDescription('Tente novamente com uma nova pesquisa'))
+  }
 }
 
 const getPeople = async (channel) => await getAllMovies(channel, 'people', 'Personagens', ' 🦹‍♂️' , apiVariables.urlPeople, apiVariables.colorPeople, apiVariables.imagePeople)
@@ -45,6 +49,7 @@ const getSpecies = async (channel) => await getAllMovies(channel, 'species', 'Es
  * @param {string} color - Cor de cada categoria.
  */
 const getMoviesByPage = async (channel, endpoint, title, emoji, url, color, image) => {
+  try {
   const response = await axios.get(`${base_url}${endpoint}`)
   const { data } = response
   const msg = new MessageEmbed();
@@ -58,6 +63,9 @@ ${data.results.map(result => ` - ${result.name || result.title}
   msg.setColor(color);
   msg.setFooter(`Página: ${endpoint.split("").filter(n => (Number(n) || n == 0)).join("")}. `)
   channel.send(msg);
+  }catch (error) {
+    channel.send(new MessageEmbed().setTitle('Resultado não encontrado').setDescription('Tente novamente com uma nova pesquisa'))
+  }
 }
 
 const getPeopleByPage = async (channel, param) => await getMoviesByPage(channel, `people/?page=${param}`, 'Personagens', ' 🦹‍♂️' , apiVariables.urlPeople, apiVariables.colorPeople, apiVariables.imagePeople)
