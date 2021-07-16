@@ -1,37 +1,28 @@
-[
 {
   "imagePeople": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/people.png",
   "urlPeople": "http://especiais.ne10.uol.com.br/starwars/personagens/",
   "colorPeople": "#4287f5",
   "emojiPeople": " 🦹‍♂️",
   "titlePeople": "Personagens",
-  "endpointPeople": "people"
-},
-{
+  "endpointPeople": "people",
   "imagePlanet": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/planet.png",
   "urlPlanet": "https://starwars.fandom.com/pt/wiki/Anexo:Lista_de_planetas_de_Star_Wars",
   "colorPlanet": "#19fa05",
   "emojiPlanet": " 🪐",
   "titlePlanet": "Planetas",
-  "endpointPlanet": "planets"
-},
-{
+  "endpointPlanet": "planets",
   "imageStarship": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/starship.png",
   "urlStarship": "https://super.abril.com.br/especiais/star-wars-a-evolucao-das-naves-ao-longo-da-saga/",
   "colorStarship": "#e000ca",
   "emojiStarship": " 🚀",
   "titleStarship": "Naves",
-  "endpointStarship": "starships"
-},
-{
+  "endpointStarship": "starships",
   "imageVehicle": "https://raw.githubusercontent.com/joaovmf/bot-discord/joaovictor/assets/vehicle.png",
   "urlVehicle": "http://casadosherois.weebly.com/filmes/os-veiculos-mais-famosos-de-star-wars",
   "colorVehicle": "#f2ea05",
   "emojiVehicle": " 🚗",
   "titleVehicle": "Veículos",
-  "endpointVehicle": "vehicles"
-},
-{
+  "endpointVehicle": "vehicles",
   "imageSpecie": "https://imagensemoldes.com.br/wp-content/uploads/2020/06/Cartoon-Chewbacca-PNG-Star-Wars-PNG.png",
   "urlSpecie": "https://starwars.fandom.com/pt/wiki/Categoria:Esbo%C3%A7os_de_ra%C3%A7as_e_esp%C3%A9cies",
   "colorSpecie": "#ff700a",
@@ -39,4 +30,3 @@
   "titleSpecie": "Espécies",
   "endpointSpecie": "species"
 }
-]
