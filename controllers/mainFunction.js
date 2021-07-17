@@ -2,7 +2,6 @@ const functions = require("./functions.js");
 const apiStarWars = require("../api/starwars");
 const apiCep = require("../api/cep");
 const apiGitHub = require("../api/github");
-const whatsApp = require ('../api/whatsApp')
 
 /**
  * Define a ação a ser executada com base no conteúdo da mensagem
@@ -72,9 +71,6 @@ const receiveMessage = async (message) => {
         break;
       case "!github":
         await apiGitHub.getGitHubByName(channel, arrayContent[1]);
-        break;
-      case "!whatsapp":
-        whatsApp.sendMessage('81987992501')
         break;
       default:
         channel.send(`Este comando não é válido, ${authorMsg}. Por favor digite "!iniciar" para ver minha lista completa de comandos. Que a força esteja com você!`);
