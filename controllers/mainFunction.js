@@ -2,6 +2,7 @@ const functions = require("./functions.js");
 const apiStarWars = require("../api/starwars");
 const apiCep = require("../api/cep");
 const apiGitHub = require("../api/github");
+const wiki = require('../api/wiki');
 
 /**
  * Define a ação a ser executada com base no conteúdo da mensagem
@@ -72,11 +73,24 @@ const receiveMessage = async (message) => {
       case "!github":
         await apiGitHub.getGitHubByName(channel, arrayContent[1]);
         break;
+      case '!details':
+        await wiki.getDetailsFromWiki(channel, contentArray.splice(1).join(' '))
+        break
       default:
         channel.send(`Este comando não é válido, ${authorMsg}. Por favor digite "!iniciar" para ver minha lista completa de comandos. Que a força esteja com você!`);
         break;
     }
+    await loadingMessage.delete()
   }
 };
+
+/** Retorna a mensagem de "carregando"
+ * @param {Discord.Channel} channel O canal da mensagem
+ */
+ async function loadingMessage(channel) {
+  return await channel.send(new MessageEmbed()
+  .setTitle('Processando Resultados...')
+  .setDescription('Isso pode demorar'));
+}
 
 module.exports = { receiveMessage };
