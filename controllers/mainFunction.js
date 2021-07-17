@@ -82,3 +82,5 @@ const receiveMessage = async (message) => {
     }
   }
 };
+
+module.exports = { receiveMessage }
