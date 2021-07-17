@@ -1,13 +1,11 @@
 const wiki = require('wikijs').default;
 const { MessageEmbed } = require('discord.js')
 
-const getDetailsFromWiki = async (channel, search) => {
+const getWiki = async (channel, search) => {
 
   try {
     const page = await wiki().page(search)
-
     const content = await page.content()
-
     const info = await page.info()
     const images = await page.images()
     const imageName = encodeURI(info.image.split(' ').join('_')).replace(/\(/g, '%28').replace(/\)/g, '%29')
@@ -18,4 +16,4 @@ const getDetailsFromWiki = async (channel, search) => {
 
 }
 
-module.exports = { getDetailsFromWiki }
+module.exports = { getWiki }
